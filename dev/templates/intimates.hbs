@@ -1,0 +1,54 @@
+<table class="size-chart">
+    <thead>
+        <th>Size</th>
+        <th>US Size</th>
+        <th class="dropdown">
+            <a data-toggle="dropdown" href="#">
+            United Kindom
+            <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a data-country-trigger="uk" href="#">United Kingdom</a></li>
+                <li><a data-country-trigger="au" href="#">Australia</a></li>
+                <li><a data-country-trigger="ch" href="#">China</a></li>
+                <li><a data-country-trigger="de" href="#">Germany</a></li>
+                <li><a data-country-trigger="es" href="#">Spain</a></li>
+                <li><a data-country-trigger="it" href="#">Italy</a></li>
+            </ul>
+        </th>
+    </thead>
+    <tbody>
+        {{#each intimates}}
+        <tr>
+            <td class="uppercase">
+                {{size}}
+            </td>
+            <td>
+                {{#loopArr us}}
+                <div>{{this}}</div>
+                {{/loopArr}}
+            </td>
+            <td>
+                {{#loopArr uk}}
+                <div data-country="uk" class="is-active">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr australia}}
+                <div data-country="au" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr china}}
+                <div data-country="ch" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr germany}}
+                <div data-country="de" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr spain}}
+                <div data-country="es" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr italy}}
+                <div data-country="it" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

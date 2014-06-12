@@ -1,0 +1,18 @@
+@import "partials/variables";
+@import "partials/dropdown";
+@import "partials/states";
+@import "partials/table";
+
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.container {
+    width: 900px;
+    margin: 1em auto;
+}
+
+.bra-sizes:nth-child(odd) {
+  float:left;
+}

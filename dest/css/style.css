@@ -1,0 +1,117 @@
+.caret {
+  display: inline-block;
+  margin-left: 2px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid #333333;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 7px 0 0;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+}
+.dropdown-menu .divider {
+  overflow: hidden;
+  height: 1px;
+  margin: 9px 0;
+  background: #e6e6e6;
+}
+.dropdown-menu > li > a {
+  clear: both;
+  display: block;
+  padding: 3px 20px;
+  color: #333333;
+  line-height: 1.4;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+.dropdown {
+  position: relative;
+  margin: 0 8px;
+}
+.dropdown a {
+  text-decoration: none;
+}
+.dropdown a:focus {
+  outline: none;
+}
+
+.is-opened > .dropdown-menu,
+.is-active {
+  display: block;
+}
+
+.is-hidden {
+  display: none;
+}
+
+table {
+  margin-bottom: 1.1em;
+  border: 1px solid #ddd;
+  background: white;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+table thead {
+  background: #f5f5f5;
+}
+table th {
+  font-weight: bold;
+  padding: 0.4em;
+  display: table-cell;
+  font-size: 0.8em;
+  color: #222;
+  line-height: 1.6em;
+  text-align: left;
+}
+table td {
+  padding: 0.4em;
+  display: table-cell;
+  font-size: 0.8em;
+  color: #222;
+  line-height: 1.6em;
+  text-align: center;
+}
+table td, table th {
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+table tr:nth-of-type(even) {
+  background: #f9f9f9;
+}
+
+.highlight {
+  background: #ffcbd7;
+  cursor: crosshair;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.container {
+  width: 900px;
+  margin: 1em auto;
+}
+
+.bra-sizes:nth-child(odd) {
+  float: left;
+}

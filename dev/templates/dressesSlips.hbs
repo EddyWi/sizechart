@@ -1,0 +1,104 @@
+<table class="size-chart">
+    <thead>
+        <tr>
+            <th>Size</th>
+            <th>US Size</th>
+            <th class="dropdown">
+                <a data-toggle="dropdown" href="#">
+                United Kindom
+                <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a data-country-trigger="uk" href="#">United Kingdom</a></li>
+                    <li><a data-country-trigger="au" href="#">Australia</a></li>
+                    <li><a data-country-trigger="ch" href="#">China</a></li>
+                    <li><a data-country-trigger="de" href="#">Germany</a></li>
+                    <li><a data-country-trigger="es" href="#">Spain</a></li>
+                    <li><a data-country-trigger="it" href="#">Italy</a></li>
+                    <li><a data-country-trigger="ru" href="#">Russia</a></li>
+                    <li><a data-country-trigger="fr" href="#">France</a></li>
+                    <li><a data-country-trigger="jp" href="#">Japan</a></li>
+                </ul>
+            </th>
+            <th>Bust</th>
+            <th>Natural Waist</th>
+            <th>Drop Waist</th>
+            <th>Hips</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each dressesTops}}
+        <tr>
+            <td class="uppercase">
+                <div>{{size}}</div>
+            </td>
+            <td>
+                {{#loopArr us}}
+                <div>{{this}}</div>
+                {{/loopArr}}
+            </td>
+            <td>
+                {{#loopArr uk}}
+                <div data-country="uk" class="is-active">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr australia}}
+                <div data-country="au" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr china}}
+                <div data-country="ch" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr germany}}
+                <div data-country="de" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr spain}}
+                <div data-country="es" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr italy}}
+                <div data-country="it" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr russia}}
+                <div data-country="ru" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr france}}
+                <div data-country="fr" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+                {{#loopArr japan}}
+                <div data-country="jp" class="is-hidden">{{this}}</div>
+                {{/loopArr}}
+            </td>
+            <td>
+                {{#loopArr bust}}
+                <div data-unit="inches" class="is-active">{{this}}"</div>
+                {{/loopArr}}
+                {{#loopArr bust-cm}}
+                <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                {{/loopArr}}
+            </td>
+            <td>
+                {{#loopArr natural-waist}}
+                <div data-unit="inches" class="is-active">{{this}}"</div>
+                {{/loopArr}}
+                {{#loopArr natural-waist-cm}}
+                <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                {{/loopArr}}
+            </td>
+            <td>
+                {{#loopArr drop-waist}}
+                <div data-unit="inches" class="is-active">{{this}}"</div>
+                {{/loopArr}}
+                {{#loopArr drop-waist-cm}}
+                <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                {{/loopArr}}
+            </td>
+            <td>
+                {{#loopArr hips}}
+                <div data-unit="inches" class="is-active">{{this}}"</div>
+                {{/loopArr}}
+                {{#loopArr hips-cm}}
+                <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                {{/loopArr}}
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
