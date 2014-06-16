@@ -13,6 +13,8 @@
     var changeUnits = '[data-action="change-units"]';
     var unitOptions = changeUnits + ' input';
 
+
+
     var toggleClasses = function($selector) {
         $selector
             .siblings('.is-active')
@@ -38,7 +40,7 @@
         var currentCountry = $this.data('countryTrigger');
         var $countrySelector = $this.closest('.size-chart')
             .find('[data-country="' + currentCountry + '"]');
-
+        
         toggleClasses($countrySelector);
     };
 
@@ -63,10 +65,13 @@
     };
 
     $(document)
-        .on('change', unitOptions, convertUnits)
-        .on('click', '[data-country-trigger]', changeCountry)
-        .on('mouseenter', 'td', toggleMouse)
-        .on('mouseleave', 'td', toggleMouse);
+        .on('change.units', unitOptions, convertUnits)
+        .on('click.country', '[data-country-trigger]', changeCountry)
+        .on('mouseenter.table', 'td', toggleMouse)
+        .on('mouseleave.table', 'td', toggleMouse)
+        .on('tab.changed', function(){
+            
+        });
 
 
 }(document, Handlebars, SizeChart));
