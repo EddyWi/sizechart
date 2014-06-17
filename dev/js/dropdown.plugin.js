@@ -8,9 +8,7 @@
             var $this = $(this);
             var getItemText = $this.text();
             var $toggle = $this.parent().siblings(toggle);
-            $toggle
-                .contents()[0]
-                .textContent = getItemText;
+            $toggle.text(getItemText);
         },
         keydown: function(e) {
             // if not up or down arrows or escape

@@ -24,7 +24,8 @@
     }
 }
 
-.caret {
+.dropdown-trigger:after {
+    content:'';
     display: inline-block;
     margin-left: 2px;
     @include arrow(10px, 8px, down, $dark-grey);

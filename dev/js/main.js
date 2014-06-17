@@ -13,6 +13,12 @@
     var changeUnits = '[data-action="change-units"]';
     var unitOptions = changeUnits + ' input';
 
+    //defaults with selected country
+    var selectedCountry = {
+        code: 'uk',
+        name: 'United Kingdom',
+        changed: false
+    };
 
 
     var toggleClasses = function($selector) {
@@ -37,26 +43,29 @@
 
     var changeCountry = function() {
         var $this = $(this);
-        var currentCountry = $this.data('countryTrigger');
+        var toggle = $('[data-toggle="dropdown"]').html();
+        if (this.innerHTML === toggle) return; // jshint ignore:line
+        var currentCountry = selectedCountry.code = $this.data('countryTrigger');
         var $countrySelector = $this.closest('.size-chart')
             .find('[data-country="' + currentCountry + '"]');
-        
+
         toggleClasses($countrySelector);
+        selectedCountry.changed = true;
     };
 
     var crossHairs = function(toggle) {
         var $this = $(this);
         var idx = $this.index() + 1;
         $this.parent('tr')
-             .find('td')[toggle]('highlight');
+            .find('td')[toggle]('highlight');
 
         $this.closest('table')
-             .find('th:nth-child(' + idx + ')')[toggle]('highlight')
-             .end()
-             .find('td:nth-child(' + idx + ')')[toggle]('highlight');
+            .find('th:nth-child(' + idx + ')')[toggle]('highlight')
+            .end()
+            .find('td:nth-child(' + idx + ')')[toggle]('highlight');
     };
 
-    var toggleMouse = function(e){
+    var toggleMouse = function(e) {
         var types = {
             'mouseenter': 'addClass',
             'mouseleave': 'removeClass'
@@ -69,8 +78,15 @@
         .on('click.country', '[data-country-trigger]', changeCountry)
         .on('mouseenter.table', 'td', toggleMouse)
         .on('mouseleave.table', 'td', toggleMouse)
-        .on('tab.changed', function(){
-            
+        .on('tab.changed', function() {
+            if (selectedCountry.changed) {
+                var $country = $('[data-country-trigger="' + selectedCountry.code + '"]');
+                selectedCountry.name = $country.html();
+                $('[data-toggle="dropdown"]').text(selectedCountry.name);
+                var $countrySelector = $('[data-country="' + selectedCountry.code + '"]');
+                toggleClasses($countrySelector);
+                selectedCountry.changed = false;
+            }
         });
 
 
