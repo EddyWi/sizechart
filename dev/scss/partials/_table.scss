@@ -5,33 +5,55 @@
     color: #222;
     line-height: $line-height;
     text-align: $textAlign;
+    text-transform: uppercase;
 }
 
 table {
     margin-bottom: 1.1em;
-    border: 1px solid #ddd;
     background: $white;
     font-family: $default-font-style;
+    border-collapse: collapse;
+    border-bottom: 5px solid $white;
+    border-left: 5px solid $white;
+    border-right: 5px solid $white;
     thead {
         background: #f5f5f5;
     }
     th {
         font-weight: bold;
-        @include table-style;
+        width: 130px;
+        height: 40px;
+        border-bottom: 5px solid $white;
+        border-right: 5px solid $white;
+        border-left: 5px solid $white;
+        background: #e7e7e7;
+        @include table-style(center, 0);
+        &:nth-child(n+4) {
+            background: #9b9b9b;
+            color: #fff;
+        }
     }
     td {
         @include table-style(center);
+        border-right: 5px solid #fff;
+        &:nth-child(7n+1) {
+            background: #e7e7e7;
+        }
     }
-    td, th {
-        border-right: 1px solid $white;
-        border-bottom: 1px solid $white;
-    }
-    tr:nth-of-type(even) {
-        background: #f9f9f9;
+    tr {
+        &:nth-child(odd) {
+            background: #f7f7f7;
+        }
+        &:nth-child(even) {
+            background: #eeeeee;
+        }
+        &:nth-child(even) td:nth-child(1) {
+            background: #e1e1e1;
+        }
     }
 }
 
 .highlight {
-    background: #ffcbd7;
+    background: #ffcbd7 !important;
     cursor: crosshair;
 }

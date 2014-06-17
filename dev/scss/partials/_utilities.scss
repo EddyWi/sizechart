@@ -1,0 +1,45 @@
+/* 
+*
+* A more semantic clearfix
+* named group because its usually
+* a group's float you clear...
+* ref: http://css-tricks.com/snippets/css/clear-fix/
+*
+*/
+.group {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/*
+*
+* Compass 0.12.6 doesnt allow
+* parent selector with - or _
+* .float {
+*    &-right {
+*      float:right;
+*    }  
+*  }
+* 
+* That is only available on Compass v1
+* which is in alpha, so for now...
+*/
+
+
+.float-left {
+    float:left;
+}
+
+.float-right {
+    float:right
+}
+
+.page-divider {
+    height:1px;
+    min-width: 100%;
+    background: url('./../assets/border-50.png');
+    margin: 0 0 8px;
+}

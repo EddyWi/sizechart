@@ -25,10 +25,13 @@
 }
 
 .dropdown-trigger:after {
-    content:'';
+    content: '';
     display: inline-block;
-    margin-left: 2px;
-    @include arrow(10px, 8px, down, $dark-grey);
+    background-image: url(./../assets/icons_2x.png);
+    background-size: 400px 1000px;
+    background-position: -156px -476px;
+    width: 15px;
+    height: 11px;
 }
 
 .dropdown-menu {

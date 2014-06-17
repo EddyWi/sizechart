@@ -1,0 +1,26 @@
+.change-units {
+    input[type=radio] {
+        display: none;
+        &:checked + label {
+            outline: 0;
+            background-position: -78px -719px;
+        }
+    }
+    input[type=radio] + label {
+        display: inline-block;
+        cursor: pointer;
+        margin: 0 32px 0 14px;
+        background-size: 400px 1000px;
+        padding: 10px;
+        background-position: -38px -719px;
+        background-repeat: no-repeat;
+        position: relative;
+        background-image: url("./../assets/icons_2x.png");
+        &:after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: 6px;
+            left: 19px;
+        }
+    }
+}

@@ -16,7 +16,7 @@
     //defaults with selected country
     var selectedCountry = {
         code: 'uk',
-        name: 'United Kingdom',
+        name: 'UK Sizes',
         changed: false
     };
 
