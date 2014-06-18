@@ -32,7 +32,7 @@ h3 {
   border: 1px solid #3e3e3e;
   border-radius: 4px;
   background: white;
-  font-size: 14px;
+  font-size: "Lato", sans-serif;
   text-align: left;
   list-style: none;
 }

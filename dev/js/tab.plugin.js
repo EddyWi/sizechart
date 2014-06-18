@@ -45,7 +45,9 @@
     methods: {
       show: function(e) {
         e.preventDefault();
-        var $selected = $(e.target);
+        // only allow clicks on the anchor tag 
+        var $selected = $(e.target).is('a') && $(e.target); 
+        if (!$selected) return // jshint ignore:line
         var common = _private.common(this);
         var activeTab = common.triggers
           .removeClass('is-active')

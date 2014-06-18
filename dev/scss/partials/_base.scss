@@ -1,11 +1,11 @@
 body {
-    font-family: $default-font-style;
+    font-family: $lato;
     color: $grey;
 }
 
 h3 {
     font-size: 1.125em;
     font-style: italic;
-    font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+    font-family: $hoefler;
     font-weight: 300;
 }
