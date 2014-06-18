@@ -10,6 +10,13 @@ h3 {
   font-weight: 300;
 }
 
+h4 {
+  font-size: 1em;
+  font-style: italic;
+  font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+  font-weight: 100;
+}
+
 .dropdown-trigger:after {
   content: '';
   display: inline-block;
@@ -26,13 +33,12 @@ h3 {
   left: 0;
   z-index: 1000;
   display: none;
-  min-width: 160px;
+  min-width: 19em;
   padding: 5px 0;
-  margin: 7px 0 0;
-  border: 1px solid #3e3e3e;
-  border-radius: 4px;
-  background: white;
-  font-size: "Lato", sans-serif;
+  margin: 0;
+  min-height: 240px;
+  background: url(./../assets/border-75.png);
+  font-family: "Lato", sans-serif;
   text-align: left;
   list-style: none;
 }
@@ -42,18 +48,33 @@ h3 {
   margin: 9px 0;
   background: #cacaca;
 }
+.dropdown-menu li {
+  position: relative;
+  z-index: 999;
+  padding: 4px 0;
+}
 .dropdown-menu > li > a {
   clear: both;
   display: block;
   padding: 3px 20px;
-  color: #181818;
+  color: #7e7e7e;
   line-height: 1.4;
+  font-size: 10px;
+}
+.dropdown-menu:before {
+  background: white;
+  content: '';
+  display: block;
+  position: absolute;
+  min-width: 99%;
+  min-height: 99.3%;
+  top: 1px;
+  left: 1px;
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-  color: #262626;
+  color: #ff008a;
   text-decoration: none;
-  background-color: #f5f5f5;
 }
 
 .dropdown {
@@ -66,14 +87,29 @@ h3 {
 .dropdown a:focus {
   outline: none;
 }
+.dropdown .dropdown-trigger {
+  color: #ff008a;
+  position: relative;
+  z-index: 999999;
+}
+
+.dropdown.is-opened {
+  background: url(./../assets/border-75.png);
+}
+.dropdown.is-opened:before {
+  content: '';
+  width: 98%;
+  height: 47px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 9999;
+  background: #fff;
+}
 
 .is-opened > .dropdown-menu,
 .is-active {
   display: block;
-}
-.is-opened > .dropdown-menu a,
-.is-active a {
-  color: #ff008a;
 }
 
 .is-hidden {
@@ -125,6 +161,9 @@ table td {
 table td:nth-child(7n+1) {
   background: #e7e7e7;
 }
+table td div {
+  padding: 4px 0;
+}
 table tr:nth-child(odd) {
   background: #f7f7f7;
 }
@@ -166,6 +205,16 @@ table tr:nth-child(even) td:nth-child(1) {
 }
 .tab-content > div:not(.is-active) {
   display: none;
+}
+
+.two-column-grid .column {
+  float: left;
+  margin: 0 1.563em 0 0;
+}
+
+.column p {
+  font-size: .875em;
+  color: #7e7e7e;
 }
 
 .change-units input[type=radio] {
@@ -217,14 +266,15 @@ table tr:nth-child(even) td:nth-child(1) {
 *    }  
 *  }
 * 
-* That is only available on Compass v1
-* which is in alpha, so for now...
+* So mixin available instead
 */
 .float-left {
+  display: inline;
   float: left;
 }
 
 .float-right {
+  display: inline;
   float: right;
 }
 
@@ -235,16 +285,25 @@ table tr:nth-child(even) td:nth-child(1) {
   margin: 0 0 8px;
 }
 
+.margin-top-large {
+  margin-top: 3em !important;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
 
 .container {
-  width: 900px;
+  width: 980px;
   margin: 1em auto;
 }
 
 .change-units {
   margin: 19px 0 0;
   font-size: 0.75em;
+}
+
+.foot-note {
+  color: #7e7e7e;
+  font-size: 0.875em;
 }

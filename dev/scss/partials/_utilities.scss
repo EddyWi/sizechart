@@ -24,22 +24,26 @@
 *    }  
 *  }
 * 
-* That is only available on Compass v1
-* which is in alpha, so for now...
+* So mixin available instead
 */
 
-
-.float-left {
-    float:left;
+@mixin float($direction: left) {
+    .float-#{$direction} {
+        display: inline;
+        float: $direction;
+    }
 }
 
-.float-right {
-    float:right
-}
+@include float();
+@include float(right);
 
 .page-divider {
-    height:1px;
+    height: 1px;
     min-width: 100%;
-    background: url('./../assets/border-50.png');
+    background: url("./../assets/border-50.png");
     margin: 0 0 8px;
+}
+
+.margin-top-large {
+    margin-top: 3em !important;
 }

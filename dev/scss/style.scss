@@ -4,6 +4,7 @@
 @import "partials/states";
 @import "partials/table";
 @import "partials/tab";
+@import "partials/grid";
 @import "partials/form";
 @import "partials/utilities";
 
@@ -14,11 +15,16 @@
 }
 
 .container {
-    width: 900px;
+    width: 980px;
     margin: 1em auto;
 }
 
 .change-units {
     margin: 19px 0 0;
     font-size: 0.750em
+}
+
+.foot-note {
+    color:#7e7e7e;
+    font-size:0.875em;
 }
