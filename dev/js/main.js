@@ -76,9 +76,11 @@
     var tabChangePersist = function(){
         if (selectedCountry.changed) {
             var $country = $('[data-country-trigger="' + selectedCountry.code + '"]');
+            $country.closest('.dropdown-menu').children().removeClass('is-active');
+            $country.parent().addClass('is-active');
             selectedCountry.name = $country.html();
             $('[data-toggle="dropdown"]').text(selectedCountry.name);
-            var $countrySelector = $('[data-country="' + selectedCountry.code + '"]');            
+            var $countrySelector = $('[data-country="' + selectedCountry.code + '"]');
             toggleClasses($countrySelector);
             selectedCountry.changed = false;
         }

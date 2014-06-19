@@ -8,6 +8,8 @@
             var $this = $(this);
             var getItemText = $this.text();
             var $toggle = $this.parent().siblings(toggle);
+            $this.parent().children().removeClass('is-active');
+            $this.addClass('is-active');
             $toggle.text(getItemText);
         },
         keydown: function(e) {
