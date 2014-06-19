@@ -22,3 +22,7 @@ The gulp build commands for Handlebars is as followed:
 
 ``` gulp hbs ``` for one time and ```gulp watch-hbs``` for continual compiling
 on file change
+
+
+The size-chart is available for internal preview
+[**here**](http://goo.gl/QQvMoJ)
