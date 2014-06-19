@@ -57,6 +57,15 @@ table {
 }
 
 .highlight {
-    background: #ffcbd7 !important;
+    background: #e3e3e3 !important;
     cursor: crosshair;
+}
+
+.marked {
+    background: #ff008a !important;
+    cursor: crosshair;
+    color:$white;
+    .dropdown-trigger {
+        color:$white;
+    }
 }

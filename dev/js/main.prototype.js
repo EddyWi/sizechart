@@ -64,10 +64,14 @@
             var $this = $(e.currentTarget);
             var idx = $this.index() + 1;
             $this.parent('tr')
-                .find('td')[toggle]('highlight');
-
+                .find('td')[toggle]('highlight')
+                .end()
+                .find('td:first')[toggle]('marked');
+                
+            $this[toggle]('marked');
+            
             $this.closest('table')
-                .find('th:nth-child(' + idx + ')')[toggle]('highlight')
+                .find('th:nth-child(' + idx + ')')[toggle]('highlight marked')
                 .end()
                 .find('td:nth-child(' + idx + ')')[toggle]('highlight');
         },

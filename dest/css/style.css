@@ -184,8 +184,17 @@ table tr:nth-child(even) td:nth-child(1) {
 }
 
 .highlight {
-  background: #ffcbd7 !important;
+  background: #e3e3e3 !important;
   cursor: crosshair;
+}
+
+.marked {
+  background: #ff008a !important;
+  cursor: crosshair;
+  color: white;
+}
+.marked .dropdown-trigger {
+  color: white;
 }
 
 .tab-nav {
