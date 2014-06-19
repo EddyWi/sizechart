@@ -77,6 +77,9 @@
         top: 1px;
         left: 1px;
     }
+    .is-active a {
+        color: #ff008a;
+    }
 }
 
 .dropdown-menu > li > a {
@@ -107,7 +110,7 @@
     background: url(./../assets/border-75.png);
     &:before {
         content: '';
-        width: 98%;
+        width: 98.1%;
         height: 47px;
         position: absolute;
         top: 1px;

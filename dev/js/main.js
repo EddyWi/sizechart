@@ -24,9 +24,9 @@
     var toggleClasses = function($selector) {
         $selector
             .siblings('.is-active')
-            .toggleClass('is-active is-hidden')
+            .removeClass('is-active').addClass('is-hidden')
             .end()
-            .toggleClass('is-hidden is-active');
+            .removeClass('is-hidden').addClass('is-active');
     };
 
     var convertUnits = function() {
@@ -73,21 +73,23 @@
         return crossHairs.call(this, types[e.type]);
     };
 
+    var tabChangePersist = function(){
+        if (selectedCountry.changed) {
+            var $country = $('[data-country-trigger="' + selectedCountry.code + '"]');
+            selectedCountry.name = $country.html();
+            $('[data-toggle="dropdown"]').text(selectedCountry.name);
+            var $countrySelector = $('[data-country="' + selectedCountry.code + '"]');            
+            toggleClasses($countrySelector);
+            selectedCountry.changed = false;
+        }
+    };
+
     $(document)
         .on('change.units', unitOptions, convertUnits)
         .on('click.country', '[data-country-trigger]', changeCountry)
         .on('mouseenter.table', 'td', toggleMouse)
         .on('mouseleave.table', 'td', toggleMouse)
-        .on('tab.changed', function() {
-            if (selectedCountry.changed) {
-                var $country = $('[data-country-trigger="' + selectedCountry.code + '"]');
-                selectedCountry.name = $country.html();
-                $('[data-toggle="dropdown"]').text(selectedCountry.name);
-                var $countrySelector = $('[data-country="' + selectedCountry.code + '"]');
-                toggleClasses($countrySelector);
-                selectedCountry.changed = false;
-            }
-        });
+        .on('tab.changed', tabChangePersist);
 
 
 }(document, Handlebars, SizeChart));

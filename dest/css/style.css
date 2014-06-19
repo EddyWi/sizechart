@@ -8,6 +8,7 @@ h3 {
   font-style: italic;
   font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
   font-weight: 300;
+  margin: 1.25em 0 0.625em;
 }
 
 h4 {
@@ -15,6 +16,11 @@ h4 {
   font-style: italic;
   font-family: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
   font-weight: 100;
+  margin: 0.625em 0;
+}
+
+p {
+  margin: 0 0 0.625em;
 }
 
 .dropdown-trigger:after {
@@ -71,6 +77,9 @@ h4 {
   top: 1px;
   left: 1px;
 }
+.dropdown-menu .is-active a {
+  color: #ff008a;
+}
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
   color: #ff008a;
@@ -98,7 +107,7 @@ h4 {
 }
 .dropdown.is-opened:before {
   content: '';
-  width: 98%;
+  width: 98.1%;
   height: 47px;
   position: absolute;
   top: 1px;
@@ -117,7 +126,7 @@ h4 {
 }
 
 table {
-  margin-bottom: 1.1em;
+  margin-bottom: .7em;
   background: white;
   font-family: "Lato", sans-serif;
   border-collapse: collapse;
@@ -286,7 +295,12 @@ table tr:nth-child(even) td:nth-child(1) {
 }
 
 .margin-top-large {
-  margin-top: 3em !important;
+  margin-top: 2em !important;
+}
+
+.two-column {
+  float: left;
+  margin: 0 1.3em;
 }
 
 .uppercase {
@@ -299,7 +313,7 @@ table tr:nth-child(even) td:nth-child(1) {
 }
 
 .change-units {
-  margin: 19px 0 0;
+  margin: 24px 0 0;
   font-size: 0.75em;
 }
 

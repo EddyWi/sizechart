@@ -8,6 +8,7 @@ h3 {
     font-style: italic;
     font-family: $hoefler;
     font-weight: 300;
+    margin: 1.25em 0 0.625em;
 }
 
 h4 {
@@ -15,4 +16,9 @@ h4 {
     font-style: italic;
     font-family: $hoefler;
     font-weight: 100;
+    margin: 0.625em 0;
+}
+
+p {
+    margin: 0 0 0.625em;
 }
