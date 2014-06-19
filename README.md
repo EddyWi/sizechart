@@ -7,6 +7,12 @@ Composed of standalone modules, including tab based layout and crosshairs.
 The data is modeled inside the ```data.json``` file and displayed in a handlebars
 based view.
 
+### Todo
+
+- [ ] Mobile Version
+- [ ] Refactor SCSS maybe include some fixins
+
+
 #### Handlebars View
 The Handlebars views are pre-compiled to promote minimal footprint.
 
@@ -14,7 +20,7 @@ All that is needed is the runtime libary and not the full handlebars library.
 
 The below url would suffice since the version of runtime has to
 match the compiler version:
-```
+```javascript
 //cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.runtime.js
 ```
 
