@@ -25,4 +25,4 @@ on file change
 
 
 The size-chart is available for internal preview
-[**here**](http://10.20.106.41/modules/sizeChart/)
+[**here**](http://goo.gl/QQvMoJ)
