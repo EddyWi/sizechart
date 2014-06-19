@@ -11,7 +11,7 @@ based view.
 
 - [ ] Mobile Version
 - [ ] Refactor SCSS maybe include some fixins
-
+- [ ] Look into issues/questions [1](https://github.com/freepeople/sizechart/issues/1) and [2](https://github.com/freepeople/sizechart/issues/2)
 
 #### Handlebars View
 The Handlebars views are pre-compiled to promote minimal footprint.
