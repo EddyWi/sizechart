@@ -10,7 +10,7 @@ based view.
 ### Todo
 
 - [x] Mobile Version
-- [] Refactor SCSS maybe include some fixins
+- [ ] Refactor SCSS maybe include some fixins
 - [x] Look into issues/questions [1](https://github.com/freepeople/sizechart/issues/1) and [2](https://github.com/freepeople/sizechart/issues/2)
 - [ ] Test Browsers
 - [ ] Apply answered issues to size-chart
