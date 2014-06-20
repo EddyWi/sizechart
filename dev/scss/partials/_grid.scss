@@ -1,13 +1,48 @@
-.two-column-grid {
-    .column {
-        float: left;
-        margin: 0 1.563em 0 0;
-    }
+.container {
+    max-width: 58.125em;
+    margin: 1em auto;
+}
+
+.grid {
+    width: 100%;
 }
 
 .column {
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
     p {
         font-size: .875em;
-        color:#7e7e7e;
+        color: #7e7e7e;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+@media screen and (min-width: 75em) {}
+
+@media screen and (min-width: 48em) {
+    .two-column {
+        .column {
+            float: left;
+            max-width: 46.6%;
+        }
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .table-respond {
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
+    }
+    .tab-nav li{
+        display: block;
     }
 }

@@ -63,17 +63,14 @@
         buildCrossHairs: function(toggle, e) {
             var $this = $(e.currentTarget);
             var idx = $this.index() + 1;
+            $this[toggle]('highlight');
             $this.parent('tr')
-                .find('td')[toggle]('highlight')
+                .find('td')[toggle]('passive-highlight')
                 .end()
-                .find('td:first')[toggle]('marked');
-                
-            $this[toggle]('marked');
-            
+                .find('td:first')[toggle]('highlight');
+
             $this.closest('table')
-                .find('th:nth-child(' + idx + ')')[toggle]('highlight marked')
-                .end()
-                .find('td:nth-child(' + idx + ')')[toggle]('highlight');
+                .find('th:nth-child(' + idx + ')')[toggle]('passive-highlight highlight');
         },
         enableCrossHairs: function(e) {
             var types = {
@@ -83,24 +80,35 @@
             return this.buildCrossHairs.call(this, types[e.type], e);
         },
         changeTabPersist: function() {
-            if (this.selectedCountry.changed) {
-                var $country = $('[data-country-trigger="' + this.selectedCountry.code + '"]');
-                $country.closest('.dropdown-menu').children().removeClass('is-active');
-                $country.parent().addClass('is-active');
-                this.selectedCountry.name = $country.html();
-                $('[data-toggle="dropdown"]').text(this.selectedCountry.name);
-                var $countrySelector = $('[data-country="' + this.selectedCountry.code + '"]');
-                this.toggleClasses($countrySelector);
-                this.selectedCountry.changed = false;
-            }
+            if (!this.selectedCountry.changed) return; // jshint ignore:line
+            var $country = $('[data-country-trigger="' + this.selectedCountry.code + '"]');
+            $country.closest('.dropdown-menu').children().removeClass('is-active');
+            $country.parent().addClass('is-active');
+            this.selectedCountry.name = $country.html();
+            $('[data-toggle="dropdown"]').text(this.selectedCountry.name);
+            var $countrySelector = $('[data-country="' + this.selectedCountry.code + '"]');
+            this.toggleClasses($countrySelector);
+            this.selectedCountry.changed = false;
         },
         bindEvents: function() {
-            $(this.element)
-                .on('change.units', _unitOptions, $.proxy(this.convertUnits, this))
-                .on('click.country', '[data-country-trigger]', $.proxy(this.changeCountry, this))
-                .on('mouseenter.table', 'td', $.proxy(this.enableCrossHairs, this))
-                .on('mouseleave.table', 'td', $.proxy(this.enableCrossHairs, this))
-                .on('tab.changed', $.proxy(this.changeTabPersist, this));
+            var i;
+            var $element = $(this.element);
+            var eventMap = {
+                'change.units': [_unitOptions, $.proxy(this.convertUnits, this)],
+                'click.country': ['[data-country-trigger]', $.proxy(this.changeCountry, this)],
+                'mouseenter.table': ['td', $.proxy(this.enableCrossHairs, this)],
+                'mouseleave.table': ['td', $.proxy(this.enableCrossHairs, this)],
+                'tab.changed': $.proxy(this.changeTabPersist, this)
+            };
+            for (i in eventMap) {
+                if (eventMap.hasOwnProperty(i)) {
+                    if ($.isArray(eventMap[i])) {
+                        $element.on(i, eventMap[i][0], eventMap[i][1]);
+                    } else {
+                        $element.on(i, eventMap[i]);
+                    }
+                }
+            }
         }
     };
 

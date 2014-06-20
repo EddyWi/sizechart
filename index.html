@@ -10,14 +10,15 @@
     </head>
     <body>
         <div class="container" data-sizechart>
-            <div class="row group">
-                <h3 class="float-left">Size Chart</h3>
-                <form class="change-units float-left" data-action="change-units">
-                    <input id="inches" class="change-units--radio" type="radio" name="units" value="inches" checked>
-                    <label for="inches" data-label="Inches"></label>
-                    <input id="centimeters" class="change-units--radio" type="radio" name="units" value="cm">
-                    <label for="centimeters" data-label="Centimeters"></label>
-                </form>
+            <div class="one-column grid">
+                <div class="column group"><h3 class="float-left">Size Chart</h3>
+                    <form class="change-units float-left" data-action="change-units">
+                        <input id="inches" class="change-units--radio" type="radio" name="units" value="inches" checked>
+                        <label for="inches" data-label="Inches"></label>
+                        <input id="centimeters" class="change-units--radio" type="radio" name="units" value="cm">
+                        <label for="centimeters" data-label="Centimeters"></label>
+                    </form>
+                </div>
             </div>
         </div>
         <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
@@ -29,6 +30,5 @@
         <script src="./dev/js/main.prototype.js"></script>
         <script src="./dev/js/dropdown.plugin.js"></script>
         <script src="./dev/js/tab.plugin.js"></script>
-        
     </body>
 </html>

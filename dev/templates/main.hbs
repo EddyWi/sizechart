@@ -1,20 +1,33 @@
-<div class="row">
-    <div class="page-divider"></div>
-    <ul class='tab-nav' data-toggle='tab' data-tab-settings='{"content":"#size-chart"}'>
-        <li class="is-active"><a href="#">Dresses &nbsp; &amp; &nbsp; Slips</a></li>
-        <li><a href="#" >Tops &nbsp; &amp; &nbsp; Camis</a></li>
-        <li><a href="#" >Bottoms</a></li>
-        <li><a href="#" >Swim</a></li>
-        <li><a href="#" >Shoes</a></li>
-        <li><a href="#" >Intimates</a></li>
-    </ul>
-    <div class="page-divider"></div>
-    <div id="size-chart" class="tab-content">
-        <div class="is-active">{{> dressesSlips }}</div>
-        <div>{{> topsCamis }}</div>
-        <div>{{> bottoms }}</div>
-        <div>{{> swim }}</div>
-        <div>{{> shoes }}</div>
-        <div>{{> intimates }}</div>
+<div class="one-column grid">
+    <div class="column">
+        <div class="page-divider"></div>
+        <ul class='tab-nav' data-toggle='tab' data-tab-settings='{"content":"#size-chart"}'>
+            <li class="is-active"><a href="#">Dresses &nbsp; &amp; &nbsp; Slips</a></li>
+            <li><a href="#" >Tops &nbsp; &amp; &nbsp; Camis</a></li>
+            <li><a href="#" >Bottoms</a></li>
+            <li><a href="#" >Swim</a></li>
+            <li><a href="#" >Shoes</a></li>
+            <li><a href="#" >Intimates</a></li>
+        </ul>
+        <div class="page-divider"></div>
     </div>
 </div>
+<div class="one-column grid">
+    <div class="column">
+        <div id="size-chart" class="tab-content">
+            <div class="is-active">{{> dressesSlips }}</div>
+            <div>{{> topsCamis }}</div>
+            <div>{{> bottoms }}</div>
+            <div>{{> swim }}</div>
+            <div>{{> shoes }}</div>
+            <div>{{> intimates }}</div>
+        </div>
+    </div>
+</div>
+<footer class="one-column grid center">
+    <div class="column">
+        <div class="page-divider-simple"></div>
+        <h4>Have questions about sizing</h4>
+        <p class="foot-note"><a href="#mailto:">Email us</a> or call (800) 309-1500</p>
+    </div>
+</footer>

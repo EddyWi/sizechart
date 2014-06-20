@@ -19,6 +19,18 @@ h4 {
     margin: 0.625em 0;
 }
 
+h5 {
+    font-size: 0.875em;
+    margin: 0.50em 0;
+    font-style: italic;
+    font-family: $hoefler;
+}
+
 p {
     margin: 0 0 0.625em;
+}
+
+a {
+    color:#ff008a;
+    text-decoration: none;
 }
