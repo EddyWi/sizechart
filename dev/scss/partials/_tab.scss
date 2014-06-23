@@ -29,18 +29,11 @@
     }
 }
 
+.mobile-tab {
+    display: none;
+}
+
 @media screen and (max-width: 48.0625em) {
-    %hand-border {
-        content: '';
-        background-image: url(./../assets/border-75.png);
-        width: 100.4%;
-        display: block !important;
-        border: none;
-        position: absolute;
-        z-index: -9;
-        top: -1px;
-        left: -1px;
-    }
     .tab-nav {
         text-align: center;
         position: relative;
@@ -50,14 +43,14 @@
         &.is-open {
             li {
                 display: block !important;
-                &:first-child {
+                &.is-active {
                     border-bottom: 1px solid #e7e7e7;
                 }
             }
         }
         li {
             border-bottom: 1px solid #e7e7e7;
-            &:first-child,
+            &.is-active,
             &:last-child {
                 border-bottom: none;
             }
@@ -70,7 +63,7 @@
         background-image: url(./../assets/border-75.png);
         height: 100%;
         position: relative;
-        padding: 0.9px;
+        padding: 1px;
         margin: 14px 0;
     }
     .mobile-tab {

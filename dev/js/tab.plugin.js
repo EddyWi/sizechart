@@ -72,7 +72,7 @@
           .addClass('is-active');
 
           common.nav.trigger('tab.changed');
-
+          return $(mobileTab).click();
       }
     }
   };

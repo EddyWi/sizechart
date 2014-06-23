@@ -1,129 +1,129 @@
-<div class="table-respond">    
-<table class="size-chart">
-    <thead>
-        <tr>
-            <th>Size</th>
-            <th>US Size</th>
-            <th class="dropdown">
-                <a class="dropdown-trigger" data-toggle="dropdown" href="#">
-                    UK Sizes
-                </a>
-                <ul class="dropdown-menu" role="menu">
-                    <li class="is-active"><a data-country-trigger="uk" href="#">UK Sizes</a></li>
-                    <li><a data-country-trigger="uk" href="#">Hong Kong</a></li>
-                    <li><a data-country-trigger="au" href="#">Australia</a></li>
-                    <li><a data-country-trigger="au" href="#">New Zealand</a></li>
-                    <li><a data-country-trigger="ch" href="#">China</a></li>
-                    <li><a data-country-trigger="de" href="#">Germany</a></li>
-                    <li><a data-country-trigger="de" href="#">Austria</a></li>
-                    <li><a data-country-trigger="de" href="#">Switzerland</a></li>
-                    <li><a data-country-trigger="de" href="#">Netherlands</a></li>
-                    <li><a data-country-trigger="de" href="#">Sweden</a></li>
-                    <li><a data-country-trigger="de" href="#">Brazil</a></li>
-                    <li><a data-country-trigger="es" href="#">Spain</a></li>
-                    <li><a data-country-trigger="es" href="#">Portugal</a></li>
-                    <li><a data-country-trigger="es" href="#">Denmark</a></li>
-                    <li><a data-country-trigger="es" href="#">Israel</a></li>
-                    <li><a data-country-trigger="it" href="#">Italy</a></li>
-                    <li><a data-country-trigger="ru" href="#">Russia</a></li>
-                    <li><a data-country-trigger="fr" href="#">France</a></li>
-                    <li><a data-country-trigger="jp" href="#">Japan</a></li>
-                </ul>
-            </th>
-            <th>Bust</th>
-            <th>Natural Waist</th>
-            <th>Drop Waist</th>
-            <th>Hips</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each dressesTops}}
-        <tr>
-            <td class="uppercase">
-                <div>{{size}}</div>
-            </td>
-            <td>
-                {{#loopArr us}}
-                <div>{{this}}</div>
-                {{/loopArr}}
-            </td>
-            <td>
-                {{#loopArr uk}}
-                <div data-country="uk" class="is-active">{{this}}</div>
-                {{/loopArr}}
-                {{#loopArr australia}}
-                <div data-country="au" class="is-hidden">{{this}}</div>
-                {{/loopArr}}
-                {{#loopArr china}}
-                <div data-country="ch" class="is-hidden">{{this}}</div>
-                {{/loopArr}}
-                {{#loopArr germany}}
-                <div data-country="de" class="is-hidden">{{this}}</div>
-                {{/loopArr}}
-                {{#loopArr spain}}
-                <div data-country="es" class="is-hidden">{{this}}</div>
-                {{/loopArr}}
-                {{#loopArr italy}}
-                <div data-country="it" class="is-hidden">{{this}}</div>
-                {{/loopArr}}
-                {{#loopArr russia}}
-                <div data-country="ru" class="is-hidden">{{this}}</div>
-                {{/loopArr}}
-                {{#loopArr france}}
-                <div data-country="fr" class="is-hidden">{{this}}</div>
-                {{/loopArr}}
-                {{#loopArr japan}}
-                <div data-country="jp" class="is-hidden">{{this}}</div>
-                {{/loopArr}}
-            </td>
-            <td>
-                {{#loopArr bust}}
-                <div data-unit="inches" class="is-active">{{this}}"</div>
-                {{/loopArr}}
-                {{#loopArr bust-cm}}
-                <div data-unit="cm" class="is-hidden">{{this}} cm</div>
-                {{/loopArr}}
-            </td>
-            <td>
-                {{#loopArr natural-waist}}
-                <div data-unit="inches" class="is-active">{{this}}"</div>
-                {{/loopArr}}
-                {{#loopArr natural-waist-cm}}
-                <div data-unit="cm" class="is-hidden">{{this}} cm</div>
-                {{/loopArr}}
-            </td>
-            <td>
-                {{#loopArr drop-waist}}
-                <div data-unit="inches" class="is-active">{{this}}"</div>
-                {{/loopArr}}
-                {{#loopArr drop-waist-cm}}
-                <div data-unit="cm" class="is-hidden">{{this}} cm</div>
-                {{/loopArr}}
-            </td>
-            <td>
-                {{#loopArr hips}}
-                <div data-unit="inches" class="is-active">{{this}}"</div>
-                {{/loopArr}}
-                {{#loopArr hips-cm}}
-                <div data-unit="cm" class="is-hidden">{{this}} cm</div>
-                {{/loopArr}}
-            </td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+<div class="table-respond">
+    <table class="size-chart">
+        <thead>
+            <tr>
+                <th>Size</th>
+                <th>US Size</th>
+                <th class="dropdown">
+                    <a class="dropdown-trigger" data-toggle="dropdown" href="#">
+                        UK Sizes
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="is-active"><a data-country-trigger="uk" href="#">UK Sizes</a></li>
+                        <li><a data-country-trigger="uk" href="#">Hong Kong</a></li>
+                        <li><a data-country-trigger="au" href="#">Australia</a></li>
+                        <li><a data-country-trigger="au" href="#">New Zealand</a></li>
+                        <li><a data-country-trigger="ch" href="#">China</a></li>
+                        <li><a data-country-trigger="de" href="#">Germany</a></li>
+                        <li><a data-country-trigger="de" href="#">Austria</a></li>
+                        <li><a data-country-trigger="de" href="#">Switzerland</a></li>
+                        <li><a data-country-trigger="de" href="#">Netherlands</a></li>
+                        <li><a data-country-trigger="de" href="#">Sweden</a></li>
+                        <li><a data-country-trigger="de" href="#">Brazil</a></li>
+                        <li><a data-country-trigger="es" href="#">Spain</a></li>
+                        <li><a data-country-trigger="es" href="#">Portugal</a></li>
+                        <li><a data-country-trigger="es" href="#">Denmark</a></li>
+                        <li><a data-country-trigger="es" href="#">Israel</a></li>
+                        <li><a data-country-trigger="it" href="#">Italy</a></li>
+                        <li><a data-country-trigger="ru" href="#">Russia</a></li>
+                        <li><a data-country-trigger="fr" href="#">France</a></li>
+                        <li><a data-country-trigger="jp" href="#">Japan</a></li>
+                    </ul>
+                </th>
+                <th>Bust</th>
+                <th>Natural Waist</th>
+                <th>Drop Waist</th>
+                <th>Hips</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each dressesTops}}
+            <tr>
+                <td class="uppercase">
+                    <div>{{size}}</div>
+                </td>
+                <td>
+                    {{#loopArr us}}
+                    <div>{{this}}</div>
+                    {{/loopArr}}
+                </td>
+                <td>
+                    {{#loopArr uk}}
+                    <div data-country="uk" class="is-active">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr australia}}
+                    <div data-country="au" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr china}}
+                    <div data-country="ch" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr germany}}
+                    <div data-country="de" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr spain}}
+                    <div data-country="es" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr italy}}
+                    <div data-country="it" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr russia}}
+                    <div data-country="ru" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr france}}
+                    <div data-country="fr" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr japan}}
+                    <div data-country="jp" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                </td>
+                <td>
+                    {{#loopArr bust}}
+                    <div data-unit="inches" class="is-active">{{this}}"</div>
+                    {{/loopArr}}
+                    {{#loopArr bust-cm}}
+                    <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                    {{/loopArr}}
+                </td>
+                <td>
+                    {{#loopArr natural-waist}}
+                    <div data-unit="inches" class="is-active">{{this}}"</div>
+                    {{/loopArr}}
+                    {{#loopArr natural-waist-cm}}
+                    <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                    {{/loopArr}}
+                </td>
+                <td>
+                    {{#loopArr drop-waist}}
+                    <div data-unit="inches" class="is-active">{{this}}"</div>
+                    {{/loopArr}}
+                    {{#loopArr drop-waist-cm}}
+                    <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                    {{/loopArr}}
+                </td>
+                <td>
+                    {{#loopArr hips}}
+                    <div data-unit="inches" class="is-active">{{this}}"</div>
+                    {{/loopArr}}
+                    {{#loopArr hips-cm}}
+                    <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                    {{/loopArr}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
 </div>
 <div class="one-column grid">
     <div class="column">
         <p class="foot-note">
-            All conversions are approximate and may vary by label, brand, or personal preference of fit.
+        All conversions are approximate and may vary by label, brand, or personal preference of fit.
         </p>
     </div>
 </div>
 <div class="two-column grid group">
     <div class="column">
         <h3>How to Measure</h3>
-        <img src="http://fillmurray.com/460/463">
+        <img src="http://placeape.com/460/463">
     </div>
     <div class="column margin-top-large">
         <h4>Bust</h4>
@@ -133,8 +133,8 @@
         </p>
         <h4>Natural Waist</h4>
         <p>
-        Measure around your natural waistline, keeping the tape 
-        comfortably loose. This is the narrowest part of the body 
+        Measure around your natural waistline, keeping the tape
+        comfortably loose. This is the narrowest part of the body
         between the ribs and the hips.
         </p>
         <h4>Drop Waist</h4>
@@ -143,7 +143,7 @@
         </p>
         <h4>Hips</h4>
         <p>
-        Stand with your feet together and measure around 
+        Stand with your feet together and measure around
         the fullest part of your hips
         </p>
     </div>
