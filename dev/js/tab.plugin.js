@@ -2,6 +2,7 @@
   'use strict';
 
   var tabular = '[data-toggle="tab"]';
+  var mobileTab = '[data-toggle="mobile-tab"]';
 
   var _private = {
     init: function() {
@@ -38,6 +39,12 @@
         tabContent: $tabContent
       };
       return common;
+    },
+    toggleMobileTab: function(e){
+      e.preventDefault();
+      var $this = $(this);
+      var $dropdown = $this.siblings('[data-toggle="tab"]');
+      $dropdown.toggleClass('is-open');
     }
   };
 
@@ -72,7 +79,8 @@
 
 
   
-  $(document).on('click.tab', tabular, tab.methods.show);
+  $(document).on('click.tab', tabular, tab.methods.show)
+             .on('click.mobile.tab', mobileTab, _private.toggleMobileTab);
 
   return _private.init();
 

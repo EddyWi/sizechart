@@ -1,6 +1,6 @@
 .tab-nav {
     list-style: none;
-    padding:0;
+    padding: 0;
     margin: 1.250em 0;
     .is-active a {
         color: #ff008a;
@@ -13,9 +13,12 @@
             line-height: 2;
             text-decoration: none;
             color: #7e7e7e;
-            font-weight:700;
+            font-weight: 700;
             font-size: 0.750em;
         }
+    }
+    li a:hover {
+        color: #ff008a;
     }
 }
 
@@ -23,5 +26,66 @@
     line-height: 1.5;
     > div:not(.is-active) {
         display: none;
+    }
+}
+
+@media screen and (max-width: 48.0625em) {
+    %hand-border {
+        content: '';
+        background-image: url(./../assets/border-75.png);
+        width: 100.4%;
+        display: block !important;
+        border: none;
+        position: absolute;
+        z-index: -9;
+        top: -1px;
+        left: -1px;
+    }
+    .tab-nav {
+        text-align: center;
+        position: relative;
+        background: #fff;
+        padding: 5px;
+        margin: 0;
+        &.is-open {
+            li {
+                display: block !important;
+                &:first-child {
+                    border-bottom: 1px solid #e7e7e7;
+                }
+            }
+        }
+        li {
+            border-bottom: 1px solid #e7e7e7;
+            &:first-child,
+            &:last-child {
+                border-bottom: none;
+            }
+            &:not(.is-active) {
+                display: none;
+            }
+        }
+    }
+    .hand-border {
+        background-image: url(./../assets/border-75.png);
+        height: 100%;
+        position: relative;
+        padding: 0.9px;
+        margin: 14px 0;
+    }
+    .mobile-tab {
+        background-image: url(./../assets/icons_2x.png);
+        background-size: 400px 1000px;
+        background-position: -37px -477px;
+        width: 15px;
+        height: 11px;
+        position: relative;
+        color: #e7e7e7;
+        right: 34px;
+        top: 12px;
+        cursor: pointer;
+        z-index: 9999;
+        display: block;
+        float: right;
     }
 }

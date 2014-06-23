@@ -231,6 +231,9 @@ table tr:nth-child(even) td:nth-child(1) {
   font-weight: 700;
   font-size: 0.750em;
 }
+.tab-nav li a:hover {
+  color: #ff008a;
+}
 
 .tab-content {
   line-height: 1.5;
@@ -239,6 +242,54 @@ table tr:nth-child(even) td:nth-child(1) {
   display: none;
 }
 
+@media screen and (max-width: 48.0625em) {
+  .tab-nav {
+    text-align: center;
+    position: relative;
+    background: #fff;
+    padding: 5px;
+    margin: 0;
+  }
+  .tab-nav.is-open li {
+    display: block !important;
+  }
+  .tab-nav.is-open li:first-child {
+    border-bottom: 1px solid #e7e7e7;
+  }
+  .tab-nav li {
+    border-bottom: 1px solid #e7e7e7;
+  }
+  .tab-nav li:first-child, .tab-nav li:last-child {
+    border-bottom: none;
+  }
+  .tab-nav li:not(.is-active) {
+    display: none;
+  }
+
+  .hand-border {
+    background-image: url(./../assets/border-75.png);
+    height: 100%;
+    position: relative;
+    padding: 0.9px;
+    margin: 14px 0;
+  }
+
+  .mobile-tab {
+    background-image: url(./../assets/icons_2x.png);
+    background-size: 400px 1000px;
+    background-position: -37px -477px;
+    width: 15px;
+    height: 11px;
+    position: relative;
+    color: #e7e7e7;
+    right: 34px;
+    top: 12px;
+    cursor: pointer;
+    z-index: 9999;
+    display: block;
+    float: right;
+  }
+}
 .container {
   max-width: 58.125em;
   margin: 1em auto;
@@ -267,7 +318,10 @@ img {
 @media screen and (min-width: 48em) {
   .two-column .column {
     float: left;
-    max-width: 46.6%;
+    max-width: 45.6%;
+  }
+  .two-column .margin-top-large {
+    margin-top: 3em;
   }
 }
 @media screen and (max-width: 48em) {
