@@ -128,7 +128,7 @@ a {
   background: #fff;
 }
 
-.is-opened > .dropdown-menu,
+.is-opened .dropdown-menu,
 .is-active {
   display: block;
 }
