@@ -7,7 +7,7 @@
             e.preventDefault();
             var $this = $(this);
             var getItemText = $this.text();
-            var $toggle = $this.parent().siblings(toggle);
+            var $toggle = $this.closest('.dropdown-container').siblings(toggle);
             $this.parent().children().removeClass('is-active');
             $this.addClass('is-active');
             $toggle.text(getItemText);
