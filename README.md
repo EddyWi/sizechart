@@ -12,8 +12,10 @@ based view.
 - [x] Mobile Version
 - [ ] Refactor SCSS maybe include some fixins
 - [x] Look into issues/questions [1](https://github.com/freepeople/sizechart/issues/1) and [2](https://github.com/freepeople/sizechart/issues/2)
-- [ ] Test Browsers
+- [x] Test Browsers
 - [x] Apply answered issues to size-chart
+- [x] Refactored Dropdown
+
 
 #### Handlebars View
 The Handlebars views are pre-compiled to promote minimal footprint.
