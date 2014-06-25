@@ -27,6 +27,7 @@
                 var $container = $('.container');
                 var html = main(res);
                 $container.append(html);
+                $(document).trigger('template.loaded');
             });
         },
         toggleClasses: function($selector) {
