@@ -8,8 +8,8 @@
     var SizingChart = function(element, config) {
         this.element = element;
         this.selectedCountry = {
-            code: '',
-            name: '',
+            code: 'uk',
+            name: 'UK Sizes',
         };
         // init
         this.initTemplates();
@@ -83,10 +83,7 @@
         },
         tabChangePersist: function() {
             var $selector = $('.is-active').find('a:contains(' + this.selectedCountry.name + ')');
-            var content = $selector.html();
-            if (content === this.selectedCountry.name) {
-                $selector.click();
-            }
+            $selector.click();
         },
         bindEvents: function() {
             var i;
