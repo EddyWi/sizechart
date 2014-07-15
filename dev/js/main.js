@@ -73,7 +73,7 @@
         return crossHairs.call(this, types[e.type]);
     };
 
-    var tabChangePersist = function(){
+    var tabChangePersist = function() {
         if (selectedCountry.changed) {
             var $country = $('[data-country-trigger="' + selectedCountry.code + '"]');
             $country.closest('.dropdown-menu').children().removeClass('is-active');

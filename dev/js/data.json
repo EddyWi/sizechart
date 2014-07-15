@@ -16,7 +16,7 @@
         "drop-waist": 26.25,
         "hips": 34,
         "bust-cm": 81.3,
-        "natural-waist-cm": 61.0,
+        "natural-waist-cm": "61.0",
         "drop-waist-cm": 66.7,
         "hips-cm": 86.4
     }, {
@@ -36,7 +36,7 @@
         "drop-waist": [27.25, 28.25],
         "hips": [35, 36],
         "bust-cm": [83.8, 86.4],
-        "natural-waist-cm": [63.5, 66.0],
+        "natural-waist-cm": [63.5, "66.0"],
         "drop-waist-cm": [69.2, 71.8],
         "hips-cm": [88.9, 91.4]
 
@@ -59,7 +59,7 @@
         "bust-cm": [88.9, 91.4],
         "natural-waist-cm": [68.6, 71.1],
         "drop-waist-cm": [74.3, 76.8],
-        "hips-cm": [94.0, 96.5]
+        "hips-cm": ["94.0", 96.5]
     }, {
         "size": "m",
         "us": [8, 10],
@@ -76,7 +76,7 @@
         "natural-waist": [29, 30],
         "drop-waist": [31.25, 32.25],
         "hips": [39, 40],
-        "bust-cm": [94.0, 96.5],
+        "bust-cm": ["94.0", 96.5],
         "natural-waist-cm": [73.7, 76.2],
         "drop-waist-cm": [79.4, 81.9],
         "hips-cm": [99.1, 101.6]
@@ -98,7 +98,7 @@
         "hips": [41, 42],
         "bust-cm": [99.1, 101.6],
         "natural-waist-cm": [78.7, 81.3],
-        "drop-waist-cm": [84.5, 87.0],
+        "drop-waist-cm": [84.5, "87.0"],
         "hips-cm": [104.1, 106.7]
     }, {
         "size": "xl",
@@ -126,7 +126,7 @@
         "us": ["00", 0, 2],
         "uk": [0, 2, 4],
         "australia": [2, 4, 6],
-        "china": "165/84Y",
+        "china": ["165/84Y", "165/88Y"],
         "germany": [26, 28, 30],
         "spain": [28, 30, 32],
         "italy": [32, 34, 36],
@@ -143,25 +143,25 @@
         "us": [4, 6],
         "uk": [6, 8],
         "australia": [8, 10],
-        "china": "165/88Y",
+        "china": "170/92Y",
         "germany": [32, 34],
         "spain": [34, 36],
         "italy": [38, 40],
         "russia": [42, 44],
         "france": [36, 38],
-        "japan": [7, 8],
+        "japan": [7, 9],
         "denim": [27, 28],
         "drop-waist": [29.25, 30.25],
         "hips": [37, 38],
         "drop-waist-cm": [74.30, 76.80],
-        "hips-cm": [94.00, 96.50]
+        "hips-cm": ["94.0", 96.50]
 
     }, {
         "size": "m",
         "us": [8, 10],
         "uk": [10, 12],
         "australia": [12, 14],
-        "china": "170/92Y",
+        "china": "170/96Y",
         "germany": [36, 38],
         "spain": [38, 40],
         "italy": [42, 44],
@@ -188,7 +188,7 @@
         "denim": [31, 32],
         "drop-waist": [33.25, 34.25],
         "hips": [41, 42],
-        "drop-waist-cm": [84.50, 87.00],
+        "drop-waist-cm": [84.50, "87.0"],
         "hips-cm": [104.10, 106.70]
     }],
     "inseams": [{
@@ -198,7 +198,7 @@
         "tall": 35,
         "short-cm": 73.66,
         "regular-cm": 81.28,
-        "tall-cm": 88.90
+        "tall-cm": "88.90"
     }, {
         "type": "Flare Jeans",
         "short": 31,
@@ -225,7 +225,7 @@
         "japan": 23.5,
         "china": 36.5,
         "inches": 9.06,
-        "cm": 23.00
+        "cm": "23.0"
     }, {
         "us": 7,
         "uk": 5,
@@ -251,7 +251,7 @@
         "eu": 38,
         "japan": 24.5,
         "china": 38,
-        "inches": 9.50,
+        "inches": "9.50",
         "cm": 24.10
     }, {
         "us": 8.5,
@@ -278,7 +278,7 @@
         "eu": 40,
         "japan": 26,
         "china": 39.5,
-        "inches": 10.00,
+        "inches": "10.00",
         "cm": 25.40
     }, {
         "us": 10,
@@ -305,7 +305,7 @@
         "eu": "41-42",
         "japan": 27,
         "china": 41,
-        "inches": 10.50,
+        "inches": "10.50",
         "cm": 26.70
     }],
     "intimates": [{
@@ -363,7 +363,7 @@
         "germany": ["70F", "75E", "80D"],
         "spain": ["85F", "90E", "95D"],
         "italy": ["1F", "2E", "3D"],
-        "china": ["F81", "E86", "D92"]
+        "china": ["E81", "E86", "D92"]
 
     }, {
         "size": "l/xl",
@@ -425,10 +425,10 @@
     }, {
         "size": "m",
         "bust": [37, 38],
-        "bra-size": ["36A", "36B", "34C", "36C", "34D", "34DD"],
+        "bra-size": ["36A", "36B", "34C", "36C", "34D", "32DD"],
         "waist": [31.25, 32.25],
         "high-waist": [29, 30],
-        "bust-cm": [94, 96.5],
+        "bust-cm": ["94.0", 96.5],
         "waist-cm": [79.40, 81.90],
         "us": [8, 10],
         "uk": [10, 12],
@@ -443,7 +443,7 @@
     }, {
         "size": "l",
         "bust": 39,
-        "bra-size": ["36C", "34D", "36D", "32DD"],
+        "bra-size": ["36C", "34D", "36D", "34DD", "36DD"],
         "waist": 33.25,
         "high-waist": 31,
         "bust-cm": 99.10,
