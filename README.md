@@ -36,3 +36,9 @@ on file change
 
 The size-chart is available for internal preview
 [**here**](http://goo.gl/QQvMoJ)
+
+
+##### Quick Note
+In the JSON file, some numbers are strings, this is not a bug
+it's so the data can be viewed as 10.0 or 9.50 and not 10 or 9.5
+per requests.
