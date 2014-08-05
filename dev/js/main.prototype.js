@@ -14,6 +14,16 @@
         // init
         this.initTemplates();
         this.bindEvents();
+        this.removeCSS(); // disables Weblinc stylesheets
+    };
+
+    var unwantedStyles = ["custom-min", "framework-min", "layout-min"];
+    var matched = function (sheet) {
+        for (var i = 0; i < unwantedStyles.length; i++) {
+            if (sheet.href && sheet.href.match(unwantedStyles[i])) {
+                sheet.disabled = true;
+            }
+        }
     };
 
     SizingChart.prototype = {
@@ -22,13 +32,18 @@
             Handlebars.partials = SizeChart.templates;
             var main = SizeChart.templates['main'];
 
-            var getJSON = $.getJSON('./dev/js/data.json');
+            var getJSON = $.getJSON('/content/sizechart/dev/js/data.js');
             getJSON.done(function(res) {
                 var $container = $('.container');
                 var html = main(res);
                 $container.append(html);
                 $(document).trigger('template.loaded');
             });
+        },
+        removeCSS: function () {
+            for (var i = 0; i < document.styleSheets.length; i++) {
+                matched(document.styleSheets[i]);
+            }
         },
         toggleClasses: function($selector) {
             $selector
