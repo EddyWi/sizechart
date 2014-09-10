@@ -62,3 +62,9 @@
     float: left;
     margin: 0 14px;
 }
+
+@media screen and (max-width: 700px) {
+  .two-column-table {
+    float: none;
+  }
+}

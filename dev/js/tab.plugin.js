@@ -42,28 +42,28 @@
     },
     toggleMobileTab: function(e){
       e.preventDefault();
-      var $this = $(this);
-      var $dropdown = $this.siblings('[data-toggle="tab"]');
+      var $this = $(e.target);
+        var $dropdown = $this.parents('.hand-border').find('[data-toggle="tab"]');
       $dropdown.toggleClass('is-open');
     }
   };
 
-  var tab = {
-    methods: {
-      show: function(e) {
-        e.preventDefault();
-        // only allow clicks on the anchor tag 
-        var $selected = $(e.target).is('a') && $(e.target); 
-        if (!$selected) return // jshint ignore:line
-        var common = _private.common(this);
-        var activeTab = common.triggers
-          .removeClass('is-active')
-          .find($selected)
-          .parent()
-          .addClass('is-active')
-          .filter('.is-active');
+    var tab = {
+        methods: {
+            show: function(e) {
+                e.preventDefault();
+                // only allow clicks on the anchor tag
+                var $selected = $(e.target).is('a') && $(e.target);
+                if (!$selected) return // jshint ignore:line
+                var common = _private.common(this);
+                var activeTab = common.triggers
+                    .removeClass('is-active')
+                    .find($selected)
+                    .parent()
+                    .addClass('is-active')
+                    .filter('.is-active');
 
-        var currentIndex = common.triggers.index(activeTab);
+                var currentIndex = common.triggers.index(activeTab);
 
         common.tabContent
           .children()

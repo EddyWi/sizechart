@@ -9,15 +9,15 @@
         this.element = element;
         this.selectedCountry = {
             code: 'uk',
-            name: 'UK Sizes',
+            name: 'UK Sizes'
         };
         // init
         this.initTemplates();
         this.bindEvents();
-        this.removeCSS(); // disables Weblinc stylesheets
+        this.removeCSS(); // disables Weblinc stylesheets for pop-ups size chart, not for page at /size-chart which loads via iFrame
     };
 
-    var unwantedStyles = ["custom-min", "framework-min", "layout-min"];
+    var unwantedStyles = ["custom-min", "framework-min", "layout-min", "content-mobile-min"];
     var matched = function (sheet) {
         for (var i = 0; i < unwantedStyles.length; i++) {
             if (sheet.href && sheet.href.match(unwantedStyles[i])) {
@@ -80,14 +80,14 @@
         buildCrossHairs: function(toggle, e) {
             var $this = $(e.currentTarget);
             var idx = $this.index() + 1;
-            $this[toggle]('highlight');
+            $this[toggle]('highlight active-highlight');
             $this.parent('tr')
                 .find('td')[toggle]('passive-highlight')
                 .end()
-                .find('td:first')[toggle]('highlight');
+                .find('td:first')[toggle]('cr-highlight');
 
             $this.closest('table')
-                .find('th:nth-child(' + idx + ')')[toggle]('passive-highlight highlight');
+                .find('th:nth-child(' + idx + ')')[toggle]('passive-highlight cr-highlight'); // included highlight previously
         },
         enableCrossHairs: function(e) {
             var types = {

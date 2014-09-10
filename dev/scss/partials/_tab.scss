@@ -7,7 +7,7 @@
     }
     li {
         display: inline-block;
-        margin: 0 32px 0 16px;
+        margin: 0 27px 0 16px;
         a {
             text-transform: uppercase;
             line-height: 2;
@@ -33,7 +33,7 @@
     display: none;
 }
 
-@media screen and (max-width: 48.0625em) {
+@media screen and (max-width: 36em) { /* 48.0625em */
     .tab-nav {
         text-align: center;
         position: relative;
@@ -43,6 +43,7 @@
         &.is-open {
             li {
                 display: block !important;
+                margin: 0 37px 0 16px;
                 &.is-active {
                     border-bottom: 1px solid #e7e7e7;
                 }
@@ -75,10 +76,16 @@
         position: relative;
         color: #e7e7e7;
         right: 34px;
-        top: 12px;
+        top: 10px; /* originally 12px */
         cursor: pointer;
         z-index: 9999;
         display: block;
         float: right;
     }
+
+  /* moves the measurement information up so that it's flush with the image on mobile */
+  .margin-top-large {
+    margin-top: 2em !important;
+  }
+
 }
