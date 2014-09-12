@@ -45,6 +45,14 @@
                 matched(document.styleSheets[i]);
             }
         },
+        /* domainSwap: function() {
+            var domain = document.domain;
+            if (domain.indexOf("cn") >=0 ) {
+                if ($('div').data('country') === 'ch') {
+                    this.removeClass('is-hidden').addClass('is-active');
+                }
+            }
+        }, */
         toggleClasses: function($selector) {
             $selector
                 .siblings('.is-active')

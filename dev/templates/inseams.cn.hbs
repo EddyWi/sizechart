@@ -1,0 +1,43 @@
+<table class="size-chart">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Short</th>
+            <th>Regular</th>
+            <th>Tall</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each inseams}}
+        <tr>
+            <td>
+                {{type}}
+            </td>
+            <td>
+                {{#loopArr short}}
+                    <div data-unit="inches" class="is-active">{{this}}"</div>
+                {{/loopArr}}
+                {{#loopArr short-cm}}
+                    <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                {{/loopArr}}
+            </td>
+            <td>
+                {{#loopArr regular}}
+                    <div data-unit="inches" class="is-active">{{this}}"</div>
+                {{/loopArr}}
+                {{#loopArr regular-cm}}
+                    <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                {{/loopArr}}
+            </td>
+            <td>
+                {{#loopArr tall}}
+                    <div data-unit="inches" class="is-active">{{this}}"</div>
+                {{/loopArr}}
+                {{#loopArr tall-cm}}
+                    <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                {{/loopArr}}
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,63 @@
+<div class="table-respond">
+    <table class="size-chart">
+        <thead>
+            <tr>
+                <th>US/Canada</th>
+                <th class="has-dropdown">
+                    <div class="dropdown">
+                        <a class="dropdown-trigger" data-toggle="dropdown" href="#">
+                            China
+                        </a>
+                        <div class="dropdown-container">
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a data-country-trigger="au" href="#">Australia</a></li>
+                                <li class="is-active"><a data-country-trigger="ch" href="#">China</a></li>
+                                <li><a data-country-trigger="eu" href="#">EU</a></li>
+                                <li><a data-country-trigger="jp" href="#">Japan</a></li>
+                                <li><a data-country-trigger="uk" href="#">UK</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </th>
+                <th>Measurement*</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each shoes}}
+            <tr>
+                <td>
+                    {{#loopArr us}}
+                    <div>{{this}}</div>
+                    {{/loopArr}}
+                </td>
+                <td>
+                    {{#loopArr uk}}
+                    <div data-country="uk" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr australia}}
+                    <div data-country="au" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr china}}
+                    <div data-country="ch" class="is-active">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr eu}}
+                    <div data-country="eu" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr japan}}
+                    <div data-country="jp" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                </td>
+                <td>
+                    {{#loopArr inches}}
+                    <div data-unit="inches" class="is-active">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr cm}}
+                    <div data-unit="cm" class="is-hidden">{{this}} cm</div>
+                    {{/loopArr}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <p class="foot-note">*Measurements shown in inches and CM are approximate and may vary by shoe</p>
+</div>

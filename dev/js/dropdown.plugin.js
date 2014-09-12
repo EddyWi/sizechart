@@ -83,7 +83,7 @@
     };
 
     
-    $(document).on('template.loaded',function() {
+    $(window).on('load',function() {
         $(_dropDownSelector).each(function() {
             return new Dropdown($(this));
         });
