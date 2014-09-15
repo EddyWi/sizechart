@@ -507,3 +507,49 @@ div .two-column.grid.group .column {
 .foot-note a {
   font-weight: 700;
 }
+
+#bra-calculator #band-size,
+#bra-calculator #bust-size, #bra-calculator #results {
+  padding: 7px;
+  outline: none;
+  margin: 0;
+  display: block;
+  text-align: center;
+  border: 0;
+}
+#bra-calculator #band-size,
+#bra-calculator #bust-size {
+  background: #eee;
+}
+#bra-calculator label {
+  display: block;
+  float: left;
+  margin: 5px;
+  font-size: 0.7em;
+  line-height: 1.333;
+  text-align: center;
+  text-transform: uppercase;
+}
+#bra-calculator #error {
+  clear: both;
+  color: #bf0000;
+  margin: 5px;
+  font-weight: bold;
+}
+#bra-calculator #results {
+  font-weight: bold;
+  background: #fff;
+  color: #ff008a;
+  padding: 7px 19px;
+}
+#bra-calculator .pink-border, #bra-calculator .grey-border {
+  display: block;
+  padding: 1px;
+  background: url(./../assets/ht-border.png);
+  background-color: #ff008a;
+  position: relative;
+  top: 2px;
+}
+#bra-calculator .grey-border {
+  background-color: #ccc;
+}

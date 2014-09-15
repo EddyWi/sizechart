@@ -1,92 +1,121 @@
 <div class="table-respond">
     <table class="size-chart">
         <thead>
-        <tr>
-            <th>Size</th>
-            <th>US/Canada</th>
-            <th class="has-dropdown">
-                <div class="dropdown">
-                    <a class="dropdown-trigger" data-toggle="dropdown" href="#">
-                        UK
-                    </a>
-                    <div class="dropdown-container">
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a data-country-trigger="au" href="#">Australia</a></li>
-                            <li><a data-country-trigger="de" href="#">Austria</a></li>
-                            <li><a data-country-trigger="de" href="#">Brazil</a></li>
-                            <li><a data-country-trigger="ch" href="#">China</a></li>
-                            <li><a data-country-trigger="es" href="#">Denmark</a></li>
-                            <li><a data-country-trigger="es" href="#">France</a></li>
-                            <li><a data-country-trigger="de" href="#">Germany</a></li>
-                            <li><a data-country-trigger="de" href="#">Hong Kong</a></li>
-                            <li><a data-country-trigger="es" href="#">Israel</a></li>
-                            <li><a data-country-trigger="it" href="#">Italy</a></li>
-                            <li><a data-country-trigger="de" href="#">Japan</a></li>
-                            <li><a data-country-trigger="au" href="#">New Zealand</a></li>
-                            <li><a data-country-trigger="de" href="#">Netherlands</a></li>
-                            <li><a data-country-trigger="es" href="#">Portugal</a></li>
-                            <li><a data-country-trigger="es" href="#">Spain</a></li>
-                            <li><a data-country-trigger="de" href="#">Sweden</a></li>
-                            <li><a data-country-trigger="de" href="#">Switzerland</a></li>
-                            <li class="is-active"><a data-country-trigger="uk" href="#">UK</a></li>
-                        </ul>
+            <tr>
+                <th>Size</th>
+                <th>US/Canada</th>
+                <th class="has-dropdown">
+                    <div class="dropdown">
+                        <a class="dropdown-trigger" data-toggle="dropdown" href="#">
+                            UK
+                        </a>
+                        <div class="dropdown-container">
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a data-country-trigger="au" href="#">Australia</a></li>
+                                <li><a data-country-trigger="de" href="#">Austria</a></li>
+                                <li><a data-country-trigger="de" href="#">Brazil</a></li>
+                                <li><a data-country-trigger="ch" href="#">China</a></li>
+                                <li><a data-country-trigger="es" href="#">Denmark</a></li>
+                                <li><a data-country-trigger="es" href="#">France</a></li>
+                                <li><a data-country-trigger="de" href="#">Germany</a></li>
+                                <li><a data-country-trigger="de" href="#">Hong Kong</a></li>
+                                <li><a data-country-trigger="es" href="#">Israel</a></li>
+                                <li><a data-country-trigger="it" href="#">Italy</a></li>
+                                <li><a data-country-trigger="de" href="#">Japan</a></li>
+                                <li><a data-country-trigger="au" href="#">New Zealand</a></li>
+                                <li><a data-country-trigger="de" href="#">Netherlands</a></li>
+                                <li><a data-country-trigger="es" href="#">Portugal</a></li>
+                                <li><a data-country-trigger="es" href="#">Spain</a></li>
+                                <li><a data-country-trigger="de" href="#">Sweden</a></li>
+                                <li><a data-country-trigger="de" href="#">Switzerland</a></li>
+                                <li class="is-active"><a data-country-trigger="uk" href="#">UK</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </th>
-        </tr>
+                </th>
+            </tr>
         </thead>
         <tbody>
-        {{#each intimates}}
+            {{#each intimates}}
             <tr>
                 <td class="uppercase">
                     {{size}}
                 </td>
                 <td>
                     {{#loopArr us}}
-                        <div>{{this}}</div>
+                    <div>{{this}}</div>
                     {{/loopArr}}
                 </td>
                 <td>
                     {{#loopArr uk}}
-                        <div data-country="uk" class="is-active">{{this}}</div>
+                    <div data-country="uk" class="is-active">{{this}}</div>
                     {{/loopArr}}
                     {{#loopArr australia}}
-                        <div data-country="au" class="is-hidden">{{this}}</div>
+                    <div data-country="au" class="is-hidden">{{this}}</div>
                     {{/loopArr}}
                     {{#loopArr china}}
-                        <div data-country="ch" class="is-hidden">{{this}}</div>
+                    <div data-country="ch" class="is-hidden">{{this}}</div>
                     {{/loopArr}}
                     {{#loopArr germany}}
-                        <div data-country="de" class="is-hidden">{{this}}</div>
+                    <div data-country="de" class="is-hidden">{{this}}</div>
                     {{/loopArr}}
                     {{#loopArr spain}}
-                        <div data-country="es" class="is-hidden">{{this}}</div>
+                    <div data-country="es" class="is-hidden">{{this}}</div>
                     {{/loopArr}}
                     {{#loopArr italy}}
-                        <div data-country="it" class="is-hidden">{{this}}</div>
+                    <div data-country="it" class="is-hidden">{{this}}</div>
                     {{/loopArr}}
                 </td>
             </tr>
-        {{/each}}
+            {{/each}}
         </tbody>
     </table>
     <p class="foot-note">
-        All conversions are approximate and may vary by label, brand, or personal preference of fit.
+    All conversions are approximate and may vary by label, brand, or personal preference of fit.
     </p>
     <p class="foot-note">If unsure of size, please choose based on desired fit. We recommend the size you wear in Tops as a guide.</p>
-    <!--
+    <h3>How to Measure</h3>
+    <p>
+    Grab a measuring tape, some paper and a pencil, and get started! You’ll need to find your band measurement, bust measurement, and cup size to find the bra that’s right for you.
+    </p>
     <div class="two-column grid group">
         <div class="column">
-            <h3>How to Measure</h3>
-            <img src="http://fillmurray.com/460/463">
+            <img src="/dest/assets/Band-Measurement.jpg" />
         </div>
         <div class="column margin-top-large">
-            <h4>Bust</h4>
+            <h4>1. Band measurement</h4>
             <p>
-            Measure under your arms at the fullest part of your bust.
-            Keep the tape level.
+            Place the measuring tape flat across your back and under each arm. Measure across the front of your chest, just above the bust. This is your band measurement.
             </p>
+            <p>If the number is odd, round down to the nearest even whole number.</p>
+            <p><strong>Example:</strong> If you measure at 35", round down to 34".</p>
+            <p> Band sizes are commonly available in size 32, 34, or 36. This is the number that comes before the cup size in bra sizing.</p>
         </div>
     </div>
-    -->
+    <div class="two-column grid group">
+        <div class="column">
+            <img src="/dest/assets/Bust-Measurement.jpg" />
+        </div>
+        <div class="column margin-top-large">
+            <h4>2. Bust measurement</h4>
+            <p>
+            Now measure across the bust and around your body keeping the tape parallel to the ground. Make sure to measure across the fullest part of the bust.
+            </p>
+            <p> If the measurement falls on one 1/2" or greater, round up to the next whole number.</p>
+            <p><strong>Example</strong>: If you measure 36 1/2", round up to 37".</p>
+        </div>
+    </div>
+    <h4>3. Bra Size Calculator</h4>
+    <div id="bra-calculator">
+        <label>Band Size
+            <span class="grey-border"><input id="band-size" type="text"  maxlength="2" /></span>
+        </label>
+        <label>Bust Size
+           <span class="grey-border"> <input id="bust-size" type="text"  maxlength="2" /></span>
+        </label>
+        <label>Your Bra Size Is:
+           <span class="pink-border"><input id="results" type="text"  disabled /></span>
+        </label>
+        <p id="error"></p>
+    </div>
 </div>

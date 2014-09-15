@@ -8,22 +8,69 @@
 @import "partials/form";
 @import "partials/utilities";
 
-
-
 .uppercase {
     text-transform: uppercase;
 }
 
-
 .change-units {
     margin: 24px 0 0;
-    font-size: 0.750em
+    font-size: 0.75em;
 }
 
 .foot-note {
-    color:#7e7e7e;
-    font-size:0.875em;
+    color: #7e7e7e;
+    font-size: 0.875em;
     a {
         font-weight: 700;
+    }
+}
+
+#bra-calculator {
+    %input-size {
+        padding: 7px;
+        outline: none;
+        margin: 0;
+        display: block;
+        text-align: center;
+        border: 0;
+    }
+    #band-size,
+    #bust-size {
+        @extend %input-size;
+        background: #eee;
+    }
+    label {
+        display: block;
+        float: left;
+        margin: 5px;
+        font-size: 0.7em;
+        line-height: 1.333;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    #error {
+        clear: both;
+        color: #bf0000;
+        margin: 5px;
+        font-weight: bold;
+    }
+    #results {
+        @extend %input-size;
+        font-weight: bold;
+        background: #fff;
+        color: #ff008a;
+        padding: 7px 19px;
+    }
+    .pink-border {
+        display: block;
+        padding: 1px;
+        background: url(./../assets/ht-border.png);
+        background-color: #ff008a;
+        position: relative;
+        top: 2px;
+    }
+    .grey-border {
+        @extend .pink-border;
+        background-color: #ccc;
     }
 }

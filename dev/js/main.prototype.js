@@ -18,7 +18,7 @@
     };
 
     var unwantedStyles = ["custom-min", "framework-min", "layout-min", "content-mobile-min"];
-    var matched = function (sheet) {
+    var matched = function(sheet) {
         for (var i = 0; i < unwantedStyles.length; i++) {
             if (sheet.href && sheet.href.match(unwantedStyles[i])) {
                 sheet.disabled = true;
@@ -32,15 +32,16 @@
             Handlebars.partials = SizeChart.templates;
             var main = SizeChart.templates['main'];
 
-            var getJSON = $.getJSON('/content/sizechart/dev/js/data.js');
+            var getJSON = $.getJSON('dev/js/data.js');
             getJSON.done(function(res) {
                 var $container = $('.container');
                 var html = main(res);
                 $container.append(html);
                 $(document).trigger('template.loaded');
+                new SizeCalculator();
             });
         },
-        removeCSS: function () {
+        removeCSS: function() {
             for (var i = 0; i < document.styleSheets.length; i++) {
                 matched(document.styleSheets[i]);
             }
