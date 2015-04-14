@@ -49,10 +49,11 @@
         text-transform: uppercase;
     }
     #error {
-        clear: both;
-        color: #bf0000;
-        margin: 5px;
-        font-weight: bold;
+      clear: both;
+      color: #da284a; // was #bf0000 originally
+      margin: 5px;
+      padding-top: 5px;
+      font-weight: 400;
     }
     #results {
         @extend %input-size;

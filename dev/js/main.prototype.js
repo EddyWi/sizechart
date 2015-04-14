@@ -17,7 +17,7 @@
         this.removeCSS(); // disables Weblinc stylesheets for pop-ups size chart, not for page at /size-chart which loads via iFrame
     };
 
-    var unwantedStyles = ["custom-min", "framework-min", "layout-min", "content-mobile-min"];
+    var unwantedStyles = ["custom-min", "framework-min", "layout-min", "content-mobile-min", "site-1-min", "site-2-min"];
     var matched = function(sheet) {
         for (var i = 0; i < unwantedStyles.length; i++) {
             if (sheet.href && sheet.href.match(unwantedStyles[i])) {
@@ -32,7 +32,7 @@
             Handlebars.partials = SizeChart.templates;
             var main = SizeChart.templates['main'];
 
-            var getJSON = $.getJSON('dev/js/data.js');
+            var getJSON = $.getJSON('/content/sizechart/dev/js/data.js');
             getJSON.done(function(res) {
                 var $container = $('.container');
                 var html = main(res);
@@ -46,14 +46,6 @@
                 matched(document.styleSheets[i]);
             }
         },
-        /* domainSwap: function() {
-            var domain = document.domain;
-            if (domain.indexOf("cn") >=0 ) {
-                if ($('div').data('country') === 'ch') {
-                    this.removeClass('is-hidden').addClass('is-active');
-                }
-            }
-        }, */
         toggleClasses: function($selector) {
             $selector
                 .siblings('.is-active')

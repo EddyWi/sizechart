@@ -270,12 +270,12 @@
 
     var getById = document.getElementById.bind(document);
     var ErrorHandler = function(customError) {
-        this.errorStr = customError || 'oops something went wrong, please try again';
+        this.errorStr = customError || 'Please check your measurements above and try again. <br> Enter a band size between 30 & 40. <br> Enter a cup size between 31 & 46.';
         this.errorTag = getById('error');
     };
 
     ErrorHandler.prototype.triggerError = function() {
-        this.errorTag.textContent = this.errorStr;
+        this.errorTag.innerHTML = this.errorStr;
         return '--';
     };
 
