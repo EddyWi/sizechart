@@ -57,12 +57,19 @@
             var $this = $(e.currentTarget);
             var unitValue = $this.val();
             var $currentUnit = $('[data-unit="' + unitValue + '"]');
+            var _unitRefs = $('.change-units--radio');
             $this
                 .attr('checked', true)
                 .siblings()
                 .attr('checked', false);
 
             this.toggleClasses($currentUnit);
+
+            $.each(_unitRefs, function(index, unit){
+                if ( $(unit).attr('value') === unitValue ) {
+                     $(unit).prop('checked', 'checked');
+                }
+            });
         },
         changeCountry: function(e) {
             var $this = $(e.currentTarget);
@@ -100,6 +107,14 @@
         tabChangePersist: function() {
             var $selector = $('.is-active').find('a:contains(' + this.selectedCountry.name + ')');
             $selector.click();
+
+            //_ref = "cm" or "inches"
+
+            // @TODO: when I click on "inches" or "centimeters" on any page, update the "checked" value of the other 5 instances of the radio button
+
+            // 0. _unitRefs has an array of all of the "inches" and "centimeters" buttons on the page
+            // 1. read which button was clicked by checking its "value" attribute (will either return "inches" or "cm")
+            // 2. find all other instances of the code that contain that value attribute and add the "Checked" attribute to each of them
         },
         bindEvents: function() {
             var i;
