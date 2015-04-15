@@ -1,3 +1,5 @@
+/* begin _table.scss */
+
 @mixin table-style($textAlign: left, $line-height: 1.6em) {
     display: table-cell;
     font-size: 0.8em;
@@ -94,7 +96,6 @@ table {
 
 th.cr-highlight .dropdown-trigger {
   color: $white;
-  &:after {
-    background-image: url(./../assets/icons_2xWHITE.png);
-  }
 }
+
+/* end _table.scss */
