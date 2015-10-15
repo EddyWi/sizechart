@@ -13,6 +13,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a data-country-trigger="au" href="#">Australia</a></li>
                             <li><a data-country-trigger="ch" href="#">China</a></li>
+                            <li><a data-country-trigger="europe" href="#">Europe</a></li>
                             <li><a data-country-trigger="fr" href="#">France</a></li>
                             <li><a data-country-trigger="jp" href="#">Japan</a></li>
                             <li class="is-active"><a data-country-trigger="uk" href="#">UK</a></li>
@@ -47,6 +48,9 @@
                     {{/loopArr}}
                     {{#loopArr china}}
                         <div data-country="ch" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr europe}}
+                        <div data-country="europe" class="is-hidden">{{this}}</div>
                     {{/loopArr}}
                     {{#loopArr france}}
                         <div data-country="fr" class="is-hidden">{{this}}</div>

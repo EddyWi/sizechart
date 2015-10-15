@@ -16,6 +16,7 @@
                             <li><a data-country-trigger="de" href="#">Brazil</a></li>
                             <li><a data-country-trigger="ch" href="#">China</a></li>
                             <li><a data-country-trigger="es" href="#">Denmark</a></li>
+                            <li><a data-country-trigger="europe" href="#">Europe</a></li>
                             <li><a data-country-trigger="fr" href="#">France</a></li>
                             <li><a data-country-trigger="de" href="#">Germany</a></li>
                             <li><a data-country-trigger="uk" href="#">Hong Kong</a></li>
@@ -59,6 +60,9 @@
                     {{/loopArr}}
                     {{#loopArr china}}
                         <div data-country="ch" class="is-hidden">{{this}}</div>
+                    {{/loopArr}}
+                    {{#loopArr europe}}
+                        <div data-country="europe" class="is-hidden">{{this}}</div>
                     {{/loopArr}}
                     {{#loopArr germany}}
                         <div data-country="de" class="is-hidden">{{this}}</div>

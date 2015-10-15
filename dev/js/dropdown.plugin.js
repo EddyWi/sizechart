@@ -58,7 +58,7 @@
             }
             // if index is -1, use the
             // bitwise operator and set it zero
-            if (!~index) {
+            if (!~index) {   // jshint ignore:line
                 index = 0;
             }
 
@@ -82,11 +82,10 @@
         }
     };
 
-    
     $(window).on('load',function() {
         $(_dropDownSelector).each(function() {
             return new Dropdown($(this));
         });
     });
 
-})(jQuery, window, document);
+})(jQuery, window, document);  // jshint ignore:line
